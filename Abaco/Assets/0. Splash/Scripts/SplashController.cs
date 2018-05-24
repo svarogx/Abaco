@@ -73,8 +73,8 @@ public class SplashController : MonoBehaviour {
 	}
 	
 	IEnumerator TransitionControl(){
-		AsyncOperation ao = SceneManager.LoadSceneAsync (nextScene, LoadSceneMode.Single);
-		ao.allowSceneActivation = false;
+//		AsyncOperation ao = SceneManager.LoadSceneAsync (nextScene, LoadSceneMode.Single);
+//		ao.allowSceneActivation = false;
 
 		float secTime1 = 0.0f;
 		float deltaAlpha = 1 / (initialTransition / stepTime);
@@ -110,10 +110,10 @@ public class SplashController : MonoBehaviour {
 			logoImage.color = logoColor;
 		}
 
-		ao.allowSceneActivation = true;
-		while (ao.progress < 1.0f) {
-			yield return new WaitForSeconds (stepTime);
-		}
+	//	ao.allowSceneActivation = true;
+	//	while (ao.progress < 1.0f) {
+	//		yield return new WaitForSeconds (stepTime);
+	//	}
 
 	}
 
